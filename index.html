@@ -1,4 +1,13 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arthur Ghukasyan — Mechanical Engineer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
   :root { --paper:#f2ead8; --paper-dark:#e8dcc4; --ink:#2c1f0e; --ink-faded:#5c4a30; --ink-light:#8b7355; --red:#8b2020; --bg:#c9bfa8; }
@@ -86,7 +95,7 @@
 
   /* Photo grid inside project */
   .photo-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:12px; }
-  .photo-slot { display:flex; flex-direction:column; }
+  .photo-slot { display:flex; flex-direction:column; position:relative; }
  /* Tape strip — top center by default, each slot gets its own angle via nth-child */
   .photo-slot::before {
     content:'';
@@ -184,7 +193,6 @@
   }
 </style>
 
-<link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 
 <div class="shell">
   <div class="tabs" id="tabs">
@@ -213,7 +221,8 @@
    
    
     <div class="panel active" id="panel-about">
-     <p style="font-size:11px;line-height:2;color:var(--ink-faded);max-width:540px;">Short Biography... 
+     <p style="font-size:11px;line-height:2;color:var(--ink-faded);max-width:540px;"> High honor Mechanical Engineering graduate passionate about solveing real world problems through innovative design and hands on manufacturing.
+      
      </p>
       <div class="section-title">Education</div>
       <div class="edu-block">
@@ -261,7 +270,7 @@
         <div>
           <div class="exp-role">Additive Manufacturing Intern</div>
           <div class="exp-company">Copeland</div>
-          <p style="font-size:11px;line-height:2;color:var(--ink-faded);max-width:540px;">Copeland is a global leader in sustainable heating, cooling and refrigeration compression technologies and controls solutions for commercial, industrial, cold chain and residential end markets. This co-op was located at a 1M square foot manufactring facility in Sidney, Ohio. As an Additive Manufacturing Intern, I:</p>
+          <p style="font-size:11px;line-height:2;color:var(--ink-faded);max-width:540px;">Copeland is a global leader in sustainable heating, cooling and refrigeration compression technologies and controls solutions for commercial, industrial, cold chain and residential end markets. This co-op was located at a 1M square foot manufacturing facility in Sidney, Ohio. As an Additive Manufacturing Intern, I:</p>
           <ul class="exp-bullets">
             <li>Optimized 3D CAD models for FDM thermoplastic and BMD metal machines using specialized software.</li>
             <li>Supported Product Design and Manufacturing Engineers with Design for Additive on fixtures and assemblies.</li>
@@ -276,7 +285,7 @@
         <div>
           <div class="exp-role">Engineering Intern</div>
           <div class="exp-company">Pulpdent</div>
-          <p style="font-size:11px;line-height:2;color:var(--ink-faded);max-width:540px;"> Pulpdent is a family owned and operated dental research and manufacturing company established in 1947 and committed to its founding principles of education, prevention and proactive dental care. This internship involved working and protoyping in a machine shop to develop manufacturing equipment. The largest assembly I develped in the manchine shop was a fully pneumatic machine designed to precisely fill dental syringes.</p>
+          <p style="font-size:11px;line-height:2;color:var(--ink-faded);max-width:540px;"> Pulpdent is a family owned and operated dental research and manufacturing company established in 1947 and committed to its founding principles of education, prevention and proactive dental care. This internship involved working and prototyping in a machine shop to develop manufacturing equipment. The largest assembly I develped in the machine shop was a fully pneumatic machine designed to precisely fill dental syringes.</p>
         </div>
       </div>
 
@@ -312,7 +321,7 @@
         <div class="project-title">SAE Aero Design — Wings of Gompei</div>
         <p class="project-desc">SAE Aero Design East is an international annual competition
 where collegiate teams design, build, and test remote-controlled
-aircrafts following detailed technical guidelines. The Wings of Gompei teamm competed at the 2026 event in early March, which was 
+aircrafts following detailed technical guidelines. The Wings of Gompei team competed at the 2026 event in early March, which was 
 located in Lakeland, Florida. Scoring for this event was based on
 aircraft payload capacity (2L bottles), a technical design report,
 and a flight readiness presentation. The remote-controlled aircraft features
@@ -340,7 +349,7 @@ the competition!</p>
           </div>
           <div class="photo-slot">
             <img src="planefly.png">
-            <div class="photo-caption">Plane flying at compititon</div>
+            <div class="photo-caption">Plane flying at competition</div>
           </div>
         </div>
       </div>
@@ -348,18 +357,18 @@ the competition!</p>
       <div class="project-card">
         <div class="project-num">№ 02</div>
         <div class="project-title">Pen Plotter — Engineering Experimentation</div>
-        <p class="project-desc"> This pen plotter was the result of an open ended class project that required the use of a stepper motor, servo motor, and a sensor. The X and Y axis of the pen were belt driven by two stepper motors, the servo was used actuate the pen up and down, and limit switches where used to home the pen to the origin. I 3D-printed a frame for motors, bearings, guide rails, and wrote custom MicroPython code to interpret and execute G-code commands.</p>
+        <p class="project-desc"> This pen plotter was the result of an open ended class project that required the use of a stepper motor, servo motor, and a sensor. The X and Y axis of the pen were belt driven by two stepper motors, the servo was used actuate the pen up and down, and limit switches were used to home the pen to the origin. I 3D-printed a frame for motors, bearings, guide rails, and wrote custom MicroPython code to interpret and execute G-code commands.</p>
         <div class="project-tags">
           <span class="tag">Raspberry Pi Pico</span><span class="tag">MicroPython</span><span class="tag">3D Printing</span><span class="tag">G-code</span>
         </div>
         <!-- PHOTOS: To add a photo, replace <div class="photo-placeholder">...</div> with <img src="your-image.jpg" alt="description"> -->
         <div class="photo-grid">
           <div class="photo-slot">
-            <div class="photo-placeholder"><span>Add photo —<br>Plotter in action</span></div>
-            <div class="photo-caption">Plotter in action</div>
+            </div> with <img src="penplot.png">
+            <div class="photo-caption">Pen Plotter ready to write</div>
           </div>
           <div class="photo-slot">
-            <div class="photo-placeholder"><span>Add photo —<br>Build detail</span></div>
+            </div> with <img src="pentop.png">
             <div class="photo-caption">Build detail</div>
           </div>
         </div>
@@ -416,7 +425,7 @@ the competition!</p>
   
   <!-- Actions adjusted for viewing/downloading directly -->
      <div class="resume-actions">
-       <a href="path/to/your-resume.pdf" download class="ink-btn">Download PDF</a>
+       <a href="Arthur_Ghukasyan_Resume.pdf" download="Arthur_Ghukasyan_Resume.pdf" class="ink-btn">↓ Download PDF</a>
      </div>
    </div>
 
@@ -441,54 +450,8 @@ the competition!</p>
     });
   });
 
-  // Photo grids
-  function makePhotoGrid(containerId, labels) {
-    const grid = document.getElementById(containerId);
-    labels.forEach(label => {
-      const wrapper = document.createElement('div');
-      const slot = document.createElement('div');
-      slot.className = 'photo-slot';
-      slot.innerHTML = `<span class="slot-icon">⊕</span><span class="slot-label">${label}</span><input type="file" accept="image/*"><button class="remove-btn">✕</button>`;
-      const cap = document.createElement('input');
-      cap.type = 'text'; cap.className = 'photo-caption'; cap.placeholder = 'Caption...';
-      slot.querySelector('input[type=file]').addEventListener('change', function(e) {
-        const f = e.target.files[0]; if (!f) return;
-        const r = new FileReader();
-        r.onload = ev => { let img = slot.querySelector('img'); if (!img){img=document.createElement('img');slot.insertBefore(img,slot.firstChild);} img.src=ev.target.result; };
-        r.readAsDataURL(f);
-      });
-      slot.querySelector('.remove-btn').addEventListener('click', e => { e.stopPropagation(); const img=slot.querySelector('img'); if(img)img.remove(); slot.querySelector('input[type=file]').value=''; });
-      wrapper.appendChild(slot);
-      wrapper.appendChild(cap);
-      grid.appendChild(wrapper);
-    });
-  }
-  // Photo grids are now static HTML — add images directly in the HTML above.
+  // Photo grids are static HTML — add images directly in the HTML.
 
-  // Resume upload
-  const fileInput = document.getElementById('resume-file-input');
-  const embed = document.getElementById('resume-embed');
-  const actions = document.getElementById('resume-actions');
-  const uploadArea = document.getElementById('resume-upload-area');
-  const filenameEl = document.getElementById('resume-filename');
-  const downloadBtn = document.getElementById('download-btn');
-  const replaceBtn = document.getElementById('replace-btn');
-
-  function loadPDF(file) {
-    const url = URL.createObjectURL(file);
-    embed.src = url;
-    embed.style.display = 'block';
-    uploadArea.style.display = 'none';
-    actions.style.display = 'flex';
-    downloadBtn.href = url;
-    downloadBtn.download = file.name;
-  }
-
-  fileInput.addEventListener('change', e => { if (e.target.files[0]) loadPDF(e.target.files[0]); });
-  replaceBtn.addEventListener('click', () => {
-    embed.style.display = 'none';
-    embed.src = '';
-    uploadArea.style.display = 'block';
-    actions.style.display = 'none';
-  });
 </script>
+</body>
+</html>
