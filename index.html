@@ -148,14 +148,14 @@
     border: 1px solid rgba(150,120,80,0.2); /* Optional: adds a subtle frame to the PDF */
     margin-bottom: 16px;
   }
-
+ 
   .resume-actions { 
    display: flex; 
    gap: 12px; 
    justify-content: center; 
    margin-top: 16px; 
   }
-
+ 
   .ink-btn { 
    font-family: 'Special Elite', cursive; 
    font-size: 10px; 
@@ -170,16 +170,16 @@
    text-decoration: none; 
    display: inline-block; 
   }
-
+ 
   .ink-btn:hover { 
    background: rgba(150,120,80,0.12); 
    color: var(--ink); 
   }
-
+ 
   /* Footer */
   .footer { margin-top:40px; padding-top:16px; border-top:2px solid var(--ink-faded); display:flex; justify-content:space-between; align-items:center; position:relative; z-index:1; }
   .footer-text { font-size:10px; letter-spacing:2px; text-transform:uppercase; color:var(--ink-light); }
-
+ 
   @media(max-width:620px){
     .page{padding:40px 22px 50px 46px;}
     .page::before{left:34px;}
@@ -190,6 +190,61 @@
     .photo-grid{grid-template-columns:1fr;}
     .tabs{padding-left:28px;}
     .tab-btn{font-size:9px;padding:8px 10px 10px;}
+  }
+  /* Resume tape mount */
+  .resume-tape-wrap { padding: 28px 0 12px; }
+  .resume-tape-slot {
+    position: relative;
+    width: 90%;
+    max-width: 620px;
+    margin: 0 auto;
+  }
+  /* Four corner tape strips */
+  .resume-tape-slot::before,
+  .resume-tape-slot::after {
+    content: '';
+    position: absolute;
+    width: 64px; height: 24px;
+    background-color: rgba(220,205,170,0.75);
+    background-image: repeating-linear-gradient(
+      to bottom, transparent, transparent 2px,
+      rgba(255,255,255,0.2) 2px, rgba(255,255,255,0.2) 3px
+    );
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    z-index: 2;
+  }
+  /* Top-left */
+  .resume-tape-slot::before {
+    top: -12px; left: 40px;
+    transform: rotate(-4deg);
+  }
+  /* Top-right */
+  .resume-tape-slot::after {
+    top: -12px; right: 40px;
+    transform: rotate(3deg);
+  }
+  /* Bottom corners via a wrapper div inside */
+  .resume-tape-slot .tape-bl,
+  .resume-tape-slot .tape-br {
+    content: '';
+    position: absolute;
+    width: 64px; height: 24px;
+    background-color: rgba(220,205,170,0.75);
+    background-image: repeating-linear-gradient(
+      to bottom, transparent, transparent 2px,
+      rgba(255,255,255,0.2) 2px, rgba(255,255,255,0.2) 3px
+    );
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    z-index: 2;
+  }
+  .resume-tape-slot .tape-bl { bottom: -12px; left: 40px; transform: rotate(3deg); }
+  .resume-tape-slot .tape-br { bottom: -12px; right: 40px; transform: rotate(-4deg); }
+ 
+  .resume-tape-slot img {
+    width: 100%;
+    display: block;
+    border: 1.5px solid rgba(150,120,80,0.3);
+    box-shadow: 2px 4px 16px rgba(0,0,0,0.15);
   }
 </style>
 
