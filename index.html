@@ -417,25 +417,28 @@ the competition!</p>
     </div>
 
     <!-- RESUME -->
+ <!-- To display your resume: save a screenshot or export of your resume as an image
+         (e.g. resume.png) in the same folder as this file, then replace the src below. -->
     <div class="panel" id="panel-resume">
       <div class="section-title">Resume</div>
-  
-  <!-- The Embedded PDF replaces the upload-area -->
-     <embed src="Arthur_Ghukasyan_Resume.pdf" type="application/pdf" class="resume-embed" />
-  
-  <!-- Actions adjusted for viewing/downloading directly -->
-     <div class="resume-actions">
-       <a href="Arthur_Ghukasyan_Resume.pdf" download="Arthur_Ghukasyan_Resume.pdf" class="ink-btn">↓ Download PDF</a>
-     </div>
-   </div>
-
+      <div class="resume-tape-wrap">
+        <div class="resume-tape-slot">
+          <div class="tape-bl"></div>
+          <div class="tape-br"></div>
+          <img src="resume.png" alt="Resume">
+        </div>
+      </div>
+      <div class="resume-actions" style="margin-top:20px;">
+        <a href="Arthur_Ghukasyan_Resume.pdf" download="Arthur_Ghukasyan_Resume.pdf" class="ink-btn">↓ Download PDF</a>
+      </div>
+    </div>
+ 
     <footer class="footer">
       <span class="footer-text">Typed with care — no errors corrected</span>
       <span class="footer-text" id="page-indicator">Page 1 of 4</span>
     </footer>
   </div>
 </div>
-
 <script>
   // Tabs
   const tabs = document.querySelectorAll('.tab-btn');
